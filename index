@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IN-$ight Creators</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+header {
+  background: #1c1c1c;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* GRID FROM NEW VERSION */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD STYLE COMBINED */
+.creator {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.creator h2 {
+  margin: 0 0 10px 0;
+}
+
+.price {
+  color: #00ff99;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #00ff99;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+button:hover {
+  background: #00cc77;
+}
+
+.content {
+  background: #000;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+  color: #888;
+}
+
+.payment {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1c1c1c;
+  margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+IN-$ight Creators Platform
+</header>
+
+<div class="container">
+
+<div class="grid" id="creators"></div>
+
+</div>
+
+<footer>
+© 2026 IN-$ight | All rights reserved
+</footer>
+
+<script>
+
+/* 15 FEMALE */
+const female = [
+"Aaliyah Luxe","Sofia Blaze","Amara Vee","Naomi Skye","Zara Nova",
+"Luna Belle","Kiara Storm","Maya Gold","Nia Velvet","Elena Frost",
+"Chloe Divine","Aisha Royale","Talia Moon","Rina Glow","Isabella Ray"
+];
+
+/* 3 MALE */
+const male = [
+"Jake Hunter","Liam Carter","Ethan Blake"
+];
+
+function card(name){
+  return `
+  <div class="creator">
+    <h2>@${name}</h2>
+
+    <p class="price">$100/year subscription</p>
+
+    <button>Subscribe</button>
+
+    <div class="content">
+      🔒 Subscribe to unlock exclusive content & messages
+    </div>
+
+    <div class="payment">
+      Pay via Bitcoin:<br>
+      <b>1LLrDALnEcKsvWp67fb3uU7BSFeFjpx7xV</b><br><br>
+      Send proof of payment to:<br>
+      <b>bvnol90@gmail.com</b>
+    </div>
+  </div>
+  `;
+}
+
+/* RENDER ALL */
+const allCreators = [...female, ...male];
+document.getElementById("creators").innerHTML = allCreators.map(card).join("");
+
+</script>
+
+</body>
+</html>
