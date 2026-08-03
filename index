@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IN-$ight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>IN-$ight</h1>
+  <nav>
+    <button onclick="subscribe()">Subscribe ($80/year)</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Exclusive Content from Top Influencers</h2>
+  <p>Unlock premium content for just $80/year per influencer</p>
+</section>
+
+<section class="carousel-container">
+  <h2>Featured Influencers</h2>
+  
+  <div class="carousel" id="carousel">
+    <!-- Cards will be inserted here -->
+  </div>
+
+  <button class="prev" onclick="scrollCarousel(-1)">❮</button>
+  <button class="next" onclick="scrollCarousel(1)">❯</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
